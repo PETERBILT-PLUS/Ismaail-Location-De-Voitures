@@ -11,5 +11,5 @@ hydrateRoot(
       <ToastContainer />
       <App />
     </HelmetProvider>
-  </  >,
+  </>,
 )
