@@ -73,7 +73,6 @@ function AdminCars() {
                                 carId={elem._id}
                                 carName={elem.carName}
                                 carFuel={elem.carFuel}
-                                carKm={elem.carKm}
                                 carMarque={elem.carMarque}
                                 carPlaces={elem.carPlaces}
                                 carType={elem.carType}

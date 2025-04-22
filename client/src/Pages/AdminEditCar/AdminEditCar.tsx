@@ -84,7 +84,6 @@ function AdminEditCar() {
             carName: "",
             carFuel: "",
             carImages: [],
-            carKm: 0,
             carMarque: "",
             carPlaces: 0,
             carState: "",
@@ -171,12 +170,6 @@ function AdminEditCar() {
                             {carBrands.map((brand) => <option key={brand} value={brand}>{brand}</option>)}
                         </select>
                         {touched.carMarque && errors.carMarque && <div className="text-red-500 text-xs">{errors.carMarque}</div>}
-                    </div>
-
-                    <div>
-                        <Label htmlFor="carKm">Kilométrage</Label>
-                        <TextInput id="carKm" name="carKm" type="number" value={values.carKm} onChange={handleChange} onBlur={handleBlur} placeholder="Kilométrage" required />
-                        {touched.carKm && errors.carKm && <div className="text-red-500 text-xs">{errors.carKm}</div>}
                     </div>
 
                     <div>

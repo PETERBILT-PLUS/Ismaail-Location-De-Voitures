@@ -6,7 +6,6 @@ interface AdminCarCardProps {
     carName: string;
     carFuel: string;
     carMarque: string;
-    carKm: number;
     carPlaces: number;
     carType: string;
     carImage: string;
@@ -20,7 +19,6 @@ function AdminCarCard({
     carName,
     carFuel,
     carMarque,
-    carKm,
     carPlaces,
     carType,
     carImage,
@@ -45,7 +43,6 @@ function AdminCarCard({
                     <li>Type : {carType}</li>
                     <li>État : {carState}</li>
                     <li>Carburant : {carFuel}</li>
-                    <li>Kilométrage : {carKm.toLocaleString()} km</li>
                     <li>Places : {carPlaces}</li>
                     <li>Prix / jour : {pricePerDay} DH</li>
                 </ul>

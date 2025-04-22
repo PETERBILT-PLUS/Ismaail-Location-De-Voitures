@@ -58,7 +58,6 @@ function AdminCreateCar() {
             carName: "",
             carFuel: "",
             carImages: [],
-            carKm: 0,
             carMarque: "",
             carPlaces: 0,
             carState: "",
@@ -170,21 +169,6 @@ function AdminCreateCar() {
                         {touched.carMarque && errors.carMarque && <div className="text-red-500 text-xs">{errors.carMarque}</div>}
                     </div>
 
-                    {/* Kilometers */}
-                    <div>
-                        <Label htmlFor="carKm">Kilométrage</Label>
-                        <TextInput
-                            id="carKm"
-                            name="carKm"
-                            type="number"
-                            value={values.carKm}
-                            onChange={handleChange}
-                            onBlur={handleBlur}
-                            placeholder="Kilométrage"
-                            required
-                        />
-                        {touched.carKm && errors.carKm && <div className="text-red-500 text-xs">{errors.carKm}</div>}
-                    </div>
 
                     {/* Seats */}
                     <div>

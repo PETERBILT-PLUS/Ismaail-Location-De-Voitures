@@ -1,5 +1,5 @@
 import { Link, NavLink, Outlet, useNavigate } from "react-router-dom";
-import LOGO from "../assets/Rent_Car-Ismaail.png";
+import LOGO from "../assets/C-removebg-preview.png";
 import { useState } from "react";
 
 function AdminLayout() {

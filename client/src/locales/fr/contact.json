@@ -1,0 +1,19 @@
+{
+    "title": "Contactez-nous",
+    "intro": "Nous sommes disponibles 24h/24 et 7j/7 pour répondre à vos questions.",
+    "address": {
+        "title": "Adresse",
+        "line1": "AV Moulay Rachid",
+        "line2": "45000 Ouarzazate, Maroc"
+    },
+    "phone": "Téléphone",
+    "phone.note": "0607385574",
+    "email": "Email",
+    "email.note": "najibwac2009@gmail.com",
+    "hours": {
+        "title": "Disponibilité",
+        "alwaysOpen": "Ouvert 24h/24, 7j/7",
+        "note": "Service client toujours disponible"
+    },
+    "closing": "Nous sommes à votre écoute à tout moment !"
+}

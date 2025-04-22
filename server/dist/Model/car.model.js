@@ -14,10 +14,6 @@ exports.carModel = new mongoose_1.default.Schema({
         type: String,
         required: true
     },
-    carKm: {
-        type: Number,
-        required: true
-    },
     carPlaces: {
         type: Number,
         required: true

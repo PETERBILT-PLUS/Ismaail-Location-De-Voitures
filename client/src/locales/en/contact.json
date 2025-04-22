@@ -1,0 +1,19 @@
+{
+    "title": "Contact Us",
+    "intro": "We're available 24/7 to answer your questions.",
+    "address": {
+        "title": "Address",
+        "line1": "AV Moulay Rachid",
+        "line2": "45000 Ouarzazate, Morocco"
+    },
+    "phone": "Phone",
+    "phone.note": "0607385574",
+    "email": "Email",
+    "email.note": "najibwac2009@gmail.com",
+    "hours": {
+        "title": "Availability",
+        "alwaysOpen": "Open 24/7",
+        "note": "Customer service always available"
+    },
+    "closing": "We're here for you anytime!"
+}

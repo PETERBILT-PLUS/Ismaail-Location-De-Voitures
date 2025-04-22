@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios, { AxiosResponse } from "axios";
 import { Spinner } from "flowbite-react";
+import "./GetSingleCar.css";
 
 // Install modules (required in v9)
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -144,14 +145,13 @@ function GetSingleCar() {
                 </Swiper>
             </div>
 
-            <div className="container mx-auto px-4 sm:px-24 my-20 grid grid-cols-1 lg:grid-cols-2 pb-24 pt-12">
+            <div className="body-container container mx-auto px-4 sm:px-24 my-20 grid grid-cols-1 lg:grid-cols-2 pb-24 pt-12">
                 <div className="flex flex-col justif-start items-start">
                     <h2 className="text-base lg:text-3xl" style={{ color: "var(--blue)" }}>{car.carName}</h2>
 
                     <h3 className="text-base lg:text-xl pt-8 text-gray-600">Marque: {car.carMarque}</h3>
                     <h3 className="text-base lg:text-xl pt-4 text-gray-600">Places: {car.carPlaces == 1 ? car.carPlaces + " Place" : car.carPlaces + " Places"}</h3>
                     <h3 className="text-base lg:text-xl pt-4 text-gray-600">Type: {car.carType}</h3>
-                    <h3 className="text-base lg:text-xl pt-4 text-gray-600">Km: {car.carKm} Km</h3>
                     <h3 className="text-base lg:text-xl pt-4 text-gray-600">Carburant: {car.carFuel}</h3>
                 </div>
 

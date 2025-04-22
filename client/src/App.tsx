@@ -21,7 +21,7 @@ function App() {
       {/* For The User */}
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/car/:carId" element={<GetSingleCar />} />
+        <Route path="car/:carId" element={<GetSingleCar />} />
         <Route path="login" element={<LoginAdmin />} />
         <Route path="register-admin" element={<RegisterAdmin />} />
         <Route path="service" element={<Service />} />
@@ -29,22 +29,18 @@ function App() {
       </Route>
 
       {/* For The Admin */}
-
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<AdminDashboard />} />
         <Route path="cars" element={<AdminCars />} />
         <Route path="reservations" element={<AdminReservations />} />
-        <Route  path="create-car" element={<AdminCreateCar />} />
+        <Route path="create-car" element={<AdminCreateCar />} />
         <Route path="update-car/:car_id" element={<AdminEditCar />} />
       </Route>
     </Route>
-
   ));
 
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <RouterProvider router={router} />
   );
 }
 

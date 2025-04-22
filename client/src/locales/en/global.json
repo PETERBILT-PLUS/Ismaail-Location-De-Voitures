@@ -1,0 +1,9 @@
+{
+    "buttons": {
+        "chooseCar": "Choose Your Vehicle",
+        "contactUs": "Contact Us"
+    },
+    "errors": {
+        "serverError": "Server Error. Please try again later."
+    }
+}

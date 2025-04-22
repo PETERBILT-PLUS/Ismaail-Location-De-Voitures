@@ -26,12 +26,12 @@ if (!ADMIN_GMAIL) {
 }
 const createVehicule = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { carName, carMarque, carKm, carPlaces, carFuel, carType, carImages, pricePerDay, carState } = req.body;
-        if (!carName || !carMarque || !carKm || !carPlaces || !carFuel || !carType || !carImages || !pricePerDay || !carState) {
+        const { carName, carMarque, carPlaces, carFuel, carType, carImages, pricePerDay, carState } = req.body;
+        if (!carName || !carMarque || !carPlaces || !carFuel || !carType || !carImages || !pricePerDay || !carState) {
             res.status(401).json({ success: false, message: "Manque D'informations" });
             return;
         }
-        const newCar = new car_model_1.default({ carName, carMarque, carKm, carPlaces, carFuel, carType, carImages, pricePerDay, carState });
+        const newCar = new car_model_1.default({ carName, carMarque, carPlaces, carFuel, carType, carImages, pricePerDay, carState });
         yield newCar.save();
         res.status(201).json({ success: true, message: "Voiture Crée avec Succès" });
     }
@@ -45,13 +45,13 @@ const createVehicule = (req, res) => __awaiter(void 0, void 0, void 0, function*
 exports.createVehicule = createVehicule;
 const updateCar = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { carId, carName, carMarque, carKm, carPlaces, carFuel, carType, carImages, carState } = req.body;
-        if (!carId || !carName || !carMarque || !carKm || !carPlaces || !carFuel || !carType || !carImages || !carState || !Array.isArray(carImages)) {
+        const { carId, carName, carMarque, carPlaces, carFuel, carType, carImages, carState } = req.body;
+        if (!carId || !carName || !carMarque || !carPlaces || !carFuel || !carType || !carImages || !carState || !Array.isArray(carImages)) {
             res.status(401).json({ success: false, message: "Manque d'informations" });
             return;
         }
         const updateCar = yield car_model_1.default.findByIdAndUpdate(carId, {
-            carName, carMarque, carKm, carPlaces, carFuel, carType, carImages, carState
+            carName, carMarque, carPlaces, carFuel, carType, carImages, carState
         });
         if (!updateCar) {
             res.status(404).json({ success: false, message: "Voiture Pas Trouvé" });
@@ -70,7 +70,7 @@ exports.updateCar = updateCar;
 const getCars = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const skip = Number(req.query.skip) || 0;
-        const cars = yield car_model_1.default.find({ carState: "Disponible" }).limit(10).skip(skip);
+        const cars = yield car_model_1.default.find().limit(10).skip(skip);
         if (cars.length === 0) {
             res.status(204).json({ success: true, cars: [] });
         }

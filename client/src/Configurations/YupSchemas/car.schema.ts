@@ -4,7 +4,6 @@ import * as yup from "yup";
 export interface ICar {
   carName: string;        // Name of the car
   carMarque: string;      // Car brand (e.g., Toyota, BMW)
-  carKm: number;          // Kilometers driven
   carPlaces: number;      // Number of seats
   carFuel: string;        // Fuel type (e.g., Petrol, Diesel, Electric)
   carType: string;        // Type of car (e.g., Sedan, SUV)
@@ -22,11 +21,6 @@ export const carSchema = yup.object<ICar>().shape({
   carMarque: yup
     .string()
     .required("La marque de la voiture est requise"),
-
-  carKm: yup
-    .number()
-    .typeError("Le kilométrage doit être un nombre")
-    .required("Le kilométrage est requis"),
 
   carPlaces: yup
     .number()

@@ -17,13 +17,13 @@ if (!ADMIN_GMAIL) {
 
 export const createVehicule = async (req: Request, res: Response) => {
     try {
-        const { carName, carMarque, carKm, carPlaces, carFuel, carType, carImages, pricePerDay, carState } = req.body;
-        if (!carName || !carMarque || !carKm || !carPlaces || !carFuel || !carType || !carImages || !pricePerDay || !carState) {
+        const { carName, carMarque, carPlaces, carFuel, carType, carImages, pricePerDay, carState } = req.body;
+        if (!carName || !carMarque || !carPlaces || !carFuel || !carType || !carImages || !pricePerDay || !carState) {
             res.status(401).json({ success: false, message: "Manque D'informations" });
             return;
         }
 
-        const newCar: ICar = new carModel({ carName, carMarque, carKm, carPlaces, carFuel, carType, carImages, pricePerDay, carState });
+        const newCar: ICar = new carModel({ carName, carMarque, carPlaces, carFuel, carType, carImages, pricePerDay, carState });
 
         await newCar.save();
 
@@ -38,14 +38,14 @@ export const createVehicule = async (req: Request, res: Response) => {
 
 export const updateCar = async (req: Request, res: Response) => {
     try {
-        const { carId, carName, carMarque, carKm, carPlaces, carFuel, carType, carImages, carState } = req.body;
-        if (!carId || !carName || !carMarque || !carKm || !carPlaces || !carFuel || !carType || !carImages || !carState || !Array.isArray(carImages)) {
+        const { carId, carName, carMarque, carPlaces, carFuel, carType, carImages, carState } = req.body;
+        if (!carId || !carName || !carMarque || !carPlaces || !carFuel || !carType || !carImages || !carState || !Array.isArray(carImages)) {
             res.status(401).json({ success: false, message: "Manque d'informations" });
             return;
         }
 
         const updateCar: ICar | null = await carModel.findByIdAndUpdate(carId, {
-            carName, carMarque, carKm, carPlaces, carFuel, carType, carImages, carState
+            carName, carMarque, carPlaces, carFuel, carType, carImages, carState
         });
         if (!updateCar) {
             res.status(404).json({ success: false, message: "Voiture Pas Trouvé" });
@@ -65,7 +65,7 @@ export const getCars = async (req: Request, res: Response) => {
     try {
         const skip = Number(req.query.skip) || 0;
 
-        const cars: ICar[] | [] = await carModel.find({ carState: "Disponible" }).limit(10).skip(skip);
+        const cars: ICar[] | [] = await carModel.find().limit(10).skip(skip);
 
         if (cars.length === 0) {
             res.status(204).json({ success: true, cars: [] });

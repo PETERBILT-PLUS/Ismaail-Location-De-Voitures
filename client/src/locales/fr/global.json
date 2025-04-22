@@ -1,0 +1,9 @@
+{
+    "buttons": {
+        "chooseCar": "Choisir votre Véhicule",
+        "contactUs": "Contactez-nous"
+    },
+    "errors": {
+        "serverError": "Erreur du serveur. Veuillez réessayer plus tard."
+    }
+}

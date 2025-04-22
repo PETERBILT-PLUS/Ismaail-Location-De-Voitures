@@ -9,6 +9,6 @@ import vercel from 'vite-plugin-vercel';
 export default defineConfig({
   plugins: [react(), tailwindcss(), flowbiteReact(), vercel()],
   ssr: {
-    noExternal: ["react-router-dom"]
+    noExternal: ["react-router-dom", "react-helmet-async"]
   }
 })

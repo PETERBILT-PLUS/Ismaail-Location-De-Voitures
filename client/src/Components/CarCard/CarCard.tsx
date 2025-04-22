@@ -8,7 +8,6 @@ function CarCard({
   carImage,
   carName,
   carFuel,
-  carKm,
   carMarque,
   carPlaces,
   carType,
@@ -18,7 +17,6 @@ function CarCard({
   carImage: string;
   carName: string;
   carFuel: string;
-  carKm: number;
   carMarque: string;
   carPlaces: number;
   carType: string;
@@ -45,17 +43,16 @@ function CarCard({
           </h5>
         </a>
 
-        <div className="text-sm text-gray-600 dark:text-gray-300 mb-4 space-y-1">
-          <p>Marque: {carMarque}</p>
-          <p>Type: {carType}</p>
-          <p>Carburant: {carFuel}</p>
-          <p>Places: {carPlaces}</p>
-          <p>Kilométrage: {carKm} km</p>
+        <div className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+          <p className="py-1 text-md">Marque: {carMarque}</p>
+          <p className="py-1 text-md">Type: {carType}</p>
+          <p className="py-1 text-md">Carburant: {carFuel}</p>
+          <p className="py-1 text-md">Places: {carPlaces}</p>
         </div>
 
         <div className="grid grid-cols-2">
           <div className="flex flex-row justify-start items-center">
-            <span className="text-green-500 size-9 text-xl">{pricePerDay}DH/jour</span>
+            <span className="text-green-500 text-lg">{pricePerDay}  €/jour</span>
           </div>
 
           <div className="flex flex-row items-center justify-end">

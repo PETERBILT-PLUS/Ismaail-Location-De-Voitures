@@ -3,7 +3,6 @@ import mongoose, { Document } from "mongoose";
 export interface ICar extends Document {
     carName: string,
     carMarque: string,
-    carKm: number,
     carPlaces: number;
     carFuel: string;
     carType: string;
@@ -19,10 +18,6 @@ export const carModel = new mongoose.Schema<ICar>({
     },
     carMarque: {
         type: String,
-        required: true
-    },
-    carKm: {
-        type: Number,
         required: true
     },
     carPlaces: {
