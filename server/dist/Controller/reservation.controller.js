@@ -71,10 +71,6 @@ const getUSerCars = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     try {
         const skip = Number(req.query.skip) || 0;
         const cars = yield car_model_1.default.find({ carState: "Disponible" }).limit(10).skip(skip);
-        if (cars.length === 0) {
-            res.status(204).json({ success: true, cars: [] });
-            return;
-        }
         res.status(200).json({ success: true, cars: cars });
     }
     catch (error) {

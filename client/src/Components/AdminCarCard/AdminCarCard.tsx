@@ -44,7 +44,7 @@ function AdminCarCard({
                     <li>État : {carState}</li>
                     <li>Carburant : {carFuel}</li>
                     <li>Places : {carPlaces}</li>
-                    <li>Prix / jour : {pricePerDay} DH</li>
+                    <li>Prix: {pricePerDay} €/jour</li>
                 </ul>
 
                 <div className="flex flex-row justify-start items-center gap-1 md:gap-5 lg:gap-8 mt-4">

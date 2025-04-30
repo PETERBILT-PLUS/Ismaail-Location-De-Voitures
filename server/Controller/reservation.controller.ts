@@ -69,11 +69,6 @@ export const getUSerCars = async (req: Request, res: Response) => {
 
         const cars: ICar[] | [] = await carModel.find({ carState: "Disponible" }).limit(10).skip(skip);
 
-        if (cars.length === 0) {
-            res.status(204).json({ success: true, cars: [] });
-            return;
-        }
-
         res.status(200).json({ success: true, cars: cars });
     } catch (error) {
         const err = error as Error;
