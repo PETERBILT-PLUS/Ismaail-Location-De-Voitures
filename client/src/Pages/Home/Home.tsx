@@ -66,12 +66,12 @@ function Home() {
         <main>
             <Helmet>
                 <title>Location de Voitures Ouarzazate Marrakech - Galaxy Car</title>
-                <meta name="description" content="Location de voitures à l'aéroport de Marrakech – Louez une voiture pas chère en ligne. Choisissez votre véhicule et réservez facilement en quelques clics." />
-                <meta name="keywords" content="location voiture Marrakech, louer voiture Marrakech, voiture pas cher Marrakech, location auto Marrakech, Marrakech car rental" />
-                <link rel="canonical" href="https://www.galaxycar-marrakech.com" />
+                <meta name="description" content="Location de voitures à l'aéroport de Marrakech et Ouarzazate – Louez une voiture pas chère en ligne. Choisissez votre véhicule et réservez facilement en quelques clics." />
+                <meta name="keywords" content="location voiture Marrakech, louer voiture Marrakech, voiture pas cher Marrakech, location auto Marrakech, Marrakech car rental, location voiture Marrakech, louer voiture Ouarzazate, voiture pas cher Ouarzazate, location auto Ouarzazate, Ouarzazate car rental" />
+                <link rel="canonical" href="https://galaxycars2005.com" />
                 <meta property="og:locale:alternate" content="en_US" />
-                <meta property="og:title" content="Marrakech Car Rental - Galaxy Car" />
-                <meta property="og:description" content="Rent cars at Marrakech Airport – Affordable online car rental. Choose your vehicle and book easily in just a few clicks." />
+                <meta property="og:title" content="Marrakech et Ouarzazate Car Rental - Galaxy Car" />
+                <meta property="og:description" content="Rent cars at Marrakech and Ouarzazate Airport – Affordable online car rental. Choose your vehicle and book easily in just a few clicks." />
             </Helmet>
 
             <section className="hero-section">
