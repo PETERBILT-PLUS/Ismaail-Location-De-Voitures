@@ -41,7 +41,7 @@ export const createReservation = async (req: Request, res: Response) => {
         const mailOptions = {
             from: ADMIN_GMAIL,
             to: ADMIN_GMAIL,
-            subject: "Vous avez une nouvelle Réservation chez Rent Car Ismaail",
+            subject: "Vous avez une nouvelle Réservation chez Galaxy Car",
             text: `Une nouvelle Réservation crée par ${newReservation.userGmail}`
         };
 

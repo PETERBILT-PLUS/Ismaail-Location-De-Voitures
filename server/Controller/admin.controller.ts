@@ -133,8 +133,8 @@ export const acceptReservation = async (req: Request, res: Response) => {
         var mailOptions = {
             from: ADMIN_GMAIL,
             to: updateReservation.userGmail,
-            subject: "Réservation Accepté chez Rent Car Ismaail",
-            text: 'Votre Réservation a été Accepté Par Rent Car Ismaail'
+            subject: "Réservation Accepté chez Galaxy Cars",
+            text: 'Votre Réservation a été Accepté Par Galaxy Car'
         };
 
         transporter.sendMail(mailOptions, function (error, info) {
@@ -181,8 +181,8 @@ export const rejectReservation = async (req: Request, res: Response) => {
         var mailOptions = {
             from: ADMIN_GMAIL,
             to: updateReservation.userGmail,
-            subject: "Votre Réservation A été Refusé chez Rent Car Ismaail",
-            text: 'Votre Réservation A été Refusé chez Rent Car Ismaail'
+            subject: "Votre Réservation A été Refusé chez Galaxy Cars",
+            text: 'Votre Réservation A été Refusé chez Galaxy Cars'
         };
 
         transporter.sendMail(mailOptions, function (error, info) {

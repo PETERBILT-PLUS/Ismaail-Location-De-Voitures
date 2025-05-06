@@ -88,9 +88,9 @@ const ReservationCard: React.FC<ReservationCardProps> = ({
                 <h3 className="text-gray-800 text-xl pb-4">Voiture: {carId.carName}</h3>
                 <h3 className="text-gray-600 text-md pb-3">Marque: {carId.carMarque}</h3>
                 <h3 className="text-gray-600 text-md pb-3">Etat: {carId.carState}</h3>
-                <h3 className="text-gray-600 text-md pb-3">Prix/jour: {carId.pricePerDay} DH</h3>
+                <h3 className="text-gray-600 text-md pb-3">Prix/jour: {carId.pricePerDay} Euro</h3>
                 <h3 className="text-gray-600 text-md pb-3">Total jours: {differenceInDays(new Date(endDate.toString()), new Date(startDate.toString()))} {differenceInDays(new Date(endDate.toString()), new Date(startDate.toString())) > 1 ? "Jours" : "Jour"}</h3>
-                <h3 className="text-gray-600 text-md pb-3">Prix Total: {differenceInDays(new Date(endDate.toString()), new Date(startDate.toString())) * carId.pricePerDay} DH</h3>
+                <h3 className="text-gray-600 text-md pb-3">Prix Total: {differenceInDays(new Date(endDate.toString()), new Date(startDate.toString())) * carId.pricePerDay} Euro</h3>
             </div>
         </div>
     );
